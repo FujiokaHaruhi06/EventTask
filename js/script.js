@@ -1,4 +1,4 @@
-const googleFormLink = "https://docs.google.com/forms/d/e/1FAIpQLSfnUbZouvJC_8N6ufVfkNsYCAVpvcG_Vc041mY7CQz2sqvbrw/viewform?usp=header";
+const googleFormLink = "https://docs.google.com/forms/d/e/1FAIpQLSfnUbZouvJC_8N6ufVfkNsYCAVpvcG_Vc041mY7CQz2sqvbrw/viewform?usp=pp_url&entry.1432258455=";
 
 const events = [
     {title: "Tech Innovation Summit", date: "Dec 10, 2025", time: "10:00 AM - 12:00 PM", venue: "Online (Zoom)", img: "img/1.jpg" },
@@ -37,7 +37,8 @@ window.openModal = function(title, date, time) {
     modalEventTitle.innerText = title;
     modalEventTime.innerText = `${date} • ${time}`;
     
-    const encodedLink = encodeURIComponent(googleFormLink);
+    const finalFormLink = googleFormLink + encodeURIComponent(title);
+    const encodedLink = encodeURIComponent(finalFormLink);
     qrImage.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodedLink}`;
     
     modal.classList.remove('hidden');
