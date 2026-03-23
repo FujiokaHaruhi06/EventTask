@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Online Events</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>🎉 Upcoming Online Events</h1>
+    </div>
+    
+    <div id="events-grid" class="grid-container"></div>
+
+    <div id="qr-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Event Check-In</h2>
+            <h3 id="modal-event-title"></h3>
+            <p id="modal-event-time"></p>
+            
+            <img id="qr-image" src="" alt="QR Code" />
+            
+            <div class="modal-footer">
+                <button id="close-modal-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
