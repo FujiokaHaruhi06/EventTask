@@ -1,4 +1,3 @@
-/* Reset nhẹ */
 * {
     box-sizing: border-box;
 }
@@ -10,7 +9,6 @@ body {
     padding: 0;
 }
 
-/* Header */
 .header {
     text-align: center;
     margin: 20px 0;
@@ -20,7 +18,6 @@ body {
     font-size: 28px;
 }
 
-/* Grid layout */
 .grid-container {
     max-width: 1200px;
     margin: auto;
@@ -30,7 +27,6 @@ body {
     padding: 20px;
 }
 
-/* Card */
 .event-card {
     background: white;
     border-radius: 10px;
@@ -45,7 +41,6 @@ body {
     object-fit: cover;
 }
 
-/* Nội dung */
 .event-card h3 {
     padding: 10px 15px 0;
     margin: 0;
@@ -59,7 +54,6 @@ body {
     color: #333;
 }
 
-/* Button */
 .check-in-btn {
     margin: 15px;
     width: calc(100% - 30px);
@@ -76,7 +70,6 @@ body {
     background: #1e40af;
 }
 
-/* Modal */
 .modal {
     position: fixed;
     inset: 0;
@@ -90,7 +83,6 @@ body {
     display: none;
 }
 
-/* Modal content */
 .modal-content {
     background: white;
     border-radius: 10px;
@@ -99,7 +91,6 @@ body {
     text-align: center;
 }
 
-/* Title */
 .modal-content h2 {
     margin: 0;
     font-size: 22px;
@@ -115,14 +106,12 @@ body {
     margin-bottom: 15px;
 }
 
-/* QR */
 #qr-image {
     width: 200px;
     height: 200px;
     margin: 10px 0 20px;
 }
 
-/* Footer */
 .modal-footer {
     display: flex;
     justify-content: center;

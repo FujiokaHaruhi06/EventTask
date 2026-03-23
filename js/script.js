@@ -1,4 +1,4 @@
-const googleFormLink = "https://forms.gle/srkXRanvFg2Rycw66";
+const googleFormLink = "https://docs.google.com/forms/d/e/1FAIpQLSfnUbZouvJC_8N6ufVfkNsYCAVpvcG_Vc041mY7CQz2sqvbrw/viewform?usp=header";
 
 const events = [
     {title: "Tech Innovation Summit", date: "Dec 10, 2025", time: "10:00 AM - 12:00 PM", venue: "Online (Zoom)", img: "img/1.jpg" },
@@ -19,7 +19,6 @@ const qrImage = document.getElementById('qr-image');
 const modalEventTitle = document.getElementById('modal-event-title');
 const modalEventTime = document.getElementById('modal-event-time');
 
-// Tạo danh sách sự kiện trên giao diện
 events.forEach(event => {
     const card = document.createElement('div');
     card.className = 'event-card';
@@ -34,26 +33,20 @@ events.forEach(event => {
     gridContainer.appendChild(card);
 });
 
-// Hàm mở Modal và gắn QR Code
 window.openModal = function(title, date, time) {
-    // Cập nhật text trong modal
     modalEventTitle.innerText = title;
     modalEventTime.innerText = `${date} • ${time}`;
     
-    // Sinh QR Code từ link Google Form
     const encodedLink = encodeURIComponent(googleFormLink);
     qrImage.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodedLink}`;
     
-    // Hiện modal
     modal.classList.remove('hidden');
 }
 
-// Hàm đóng Modal
 closeModalBtn.addEventListener('click', () => {
     modal.classList.add('hidden');
 });
 
-// Bấm ra ngoài vùng trắng cũng đóng modal
 modal.addEventListener('click', (e) => {
     if (e.target === modal) {
         modal.classList.add('hidden');
